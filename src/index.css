@@ -1,0 +1,17 @@
+.fullFormField {
+}
+.formRows {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+.submitRow {
+}
+.selectors {
+}
+h3 {
+	margin: 5px 0px 5px 0px;
+}
+li {
+	list-style-type: none;
+}
