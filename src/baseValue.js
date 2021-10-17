@@ -25,7 +25,7 @@ const baseValueData = [
 	},
 	{
 		tier: 7,
-		value: 37020000,
+		value: 34020000,
 	},
 	{
 		tier: 8,
