@@ -93,11 +93,17 @@ function Total({ formData }) {
 		);
 	};
 
+	function numberWithCommas(x) {
+		return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+	}
+
 	const finalValue = () => {
 		if (!totalSalePrice() >= 1) {
 			return "Please enter all values in the first column";
 		} else {
-			return `Selling price is around $${Math.round(totalSalePrice())}`;
+			return `Selling price is around $${numberWithCommas(
+				Math.round(totalSalePrice())
+			)}`;
 		}
 	};
 
