@@ -1,32 +1,35 @@
 import React from "react";
-import skillsData from "../skillsData";
+import skillsData from "../database/skillsData";
 
-function Skills({ formData }) {
-	console.log(formData);
-	const skillsList = (obj) => {
-		let list = [];
-		for (let i = 0; i < obj.length; i++) {
-			if (formData.tierLevel === "") {
-				return <h3 id="skills">Select a Tier for a list of skills</h3>;
-			} else if (obj[i].tier <= formData.tierLevel) {
-				list.push(
-					<li key={obj[i].id}>
-						<input
-							id="skills"
-							type="checkbox"
-							name="skills"
-							label={obj[i].name}
-							value={obj[i].name}
-						></input>
-						<label htmlFor={obj[i].name}>{obj[i].name}</label>
-					</li>
-				);
-			}
-		}
-		return <div>{list}</div>;
-	};
+const Skills = ({ formData }) => {
+  const skillsList = (obj) => {
+    const list = [];
 
-	return <>{skillsList(skillsData)}</>;
-}
+    obj.forEach((item) => {
+      item.tier <= formData.tierLevel &&
+        list.push(
+          <li id="skills" key={item.id} name={item.name}>
+            <input id={item.name} type="checkbox" value={item.name} />
+            <label htmlFor={item.name}>
+              <img src="https://grumpygreen.cricket/old-site/images/dark-sprint.png" />
+              {item.name}
+            </label>
+          </li>
+        );
+    });
+    return <>{list}</>;
+  };
+
+  return (
+    <div className="skillsForm">
+      {console.log(skillsData[0].image)}
+      {!formData.tierLevel ? (
+        <h3 id="skills">Select Tier for skills</h3>
+      ) : (
+        skillsList(skillsData)
+      )}
+    </div>
+  );
+};
 
 export default Skills;

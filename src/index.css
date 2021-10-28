@@ -1,17 +1,173 @@
-.fullFormField {
+body {
+  margin: 0px;
+  background-color: antiquewhite;
+}
+
+.formForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .formRows {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-items: center;
 }
-.submitRow {
-}
+
 .selectors {
+  margin: 25px 0px;
 }
 h3 {
-	margin: 5px 0px 5px 0px;
+  font-size: 18px;
+  margin: 5px 0px 5px 0px;
+}
+
+h3#skills {
+  margin: 5px 0px 5px 0px;
+  text-align: center;
 }
 li {
-	list-style-type: none;
+  list-style-type: none;
+}
+.formInputField {
+  border-width: 2px;
+  border-style: solid;
+  border-color: crimson;
+}
+
+div.validFormInput {
+  padding: 2px 2px;
+}
+
+select {
+  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+}
+
+select.validFormInput {
+  padding: 1px 1px;
+}
+
+.skillsForm {
+  width: 60vw;
+  max-height: 468px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* li {
+  padding: 6px 0;
+  width: 152px;
+} */
+
+h2 {
+  margin: 5px 0px 0px 0px;
+  padding-right: 10px;
+  text-align: center;
+}
+
+.totalContainer {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  margin-top: 10px;
+}
+
+#header {
+  width: 100%;
+  height: 200px;
+  display: inline-block;
+}
+#bannerImage {
+  z-index: -1;
+  position: absolute;
+  object-fit: cover;
+  display: inline-block;
+  max-height: 200px;
+  width: 100%;
+}
+
+h1 {
+  color: antiquewhite;
+  font-size: 5vw;
+  text-align: center;
+  -webkit-text-stroke-width: 0.25vh;
+  -webkit-text-stroke-color: black;
+}
+
+li > label {
+  width: 152px;
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+li#skills {
+  display: flex;
+  align-items: center;
+}
+
+input.formInputField {
+  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+}
+
+.lineBreak {
+  height: 350px;
+  width: 3px;
+  background-color: black;
+  margin: 0 30px;
+}
+
+label > img {
+  width: 20px;
+}
+
+@media only screen and (max-width: 625px) {
+  .formRows {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .skillsForm {
+    margin-left: 10px;
+    min-width: 200px;
+    max-height: none;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .submitRow {
+    padding-left: 10px;
+  }
+
+  button {
+    margin-left: 10px;
+  }
+
+  #header {
+    height: 100px;
+  }
+  img {
+    max-height: 100px;
+  }
+  h1 {
+    -webkit-text-stroke-width: 0.1vh;
+  }
+  .lineBreak {
+    height: 3px;
+    width: 150px;
+    background-color: black;
+    margin: 30px 10px;
+  }
 }
