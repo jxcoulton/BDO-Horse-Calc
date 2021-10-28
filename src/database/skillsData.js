@@ -11,6 +11,7 @@ const skillsData = [
     name: "Fore Chop",
     tier: 1,
     value: 4350,
+    image: "https://grumpygreen.cricket/old-site/images/dark-sprint.png",
   },
   {
     id: 3,
