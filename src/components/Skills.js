@@ -11,7 +11,7 @@ const Skills = ({ formData }) => {
           <li id="skills" key={item.id} name={item.name}>
             <input id={item.name} type="checkbox" value={item.name} />
             <label htmlFor={item.name}>
-              <img src="https://grumpygreen.cricket/old-site/images/dark-sprint.png" />
+              <img src={item.image} />
               {item.name}
             </label>
           </li>

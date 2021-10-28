@@ -127,6 +127,7 @@ input.formInputField {
 
 label > img {
   width: 20px;
+  margin-right: 5px;
 }
 
 @media only screen and (max-width: 625px) {
